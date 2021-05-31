@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const hbs = require("hbs");
+const port = process.env.PORT || 8000;
 const requests = require("requests");
 const eath = path.join(__dirname,"../templates/views");
 
@@ -28,7 +29,7 @@ app.get("*", (req, res) => {
     res.send("404 error page bro");
 })
 
-app.listen(8000 , () => {
+app.listen(port , () => {
     console.log("listening");
 
 })
