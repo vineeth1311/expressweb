@@ -21,7 +21,7 @@ const getInfo = async(event) => {
             const arrData = [data];
 
             city_name.innerText = `${arrData[0].name} ${arrData[0].sys.country}`;
-            temp.innerText = arrData[0].main.temp;
+            temp.innerText = `${arrData[0].main.temp}°K`;
             const tempMood = arrData[0].weather[0].main;
 
             if(tempMood == "Clear") {
